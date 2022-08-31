@@ -1,0 +1,140 @@
+// Import colors
+@import ./helpers/colors
+
+// Reset styles
+@import ./helpers/reset
+
+// Import mixins
+@import ./helpers/mixins
+
+/* Header ------------------------------------------------ */
+@import ./sections/header
+
+/* Main -------------------------------------------------- */
+main
+
+	/* Info ----------------------------------------- */
+	section.countdown
+		background-color: #F5F5F5
+		padding: to-rem(80px) 0
+		.wrapper
+			background-color: $white-color
+			padding: to-rem(50px) 0 to-rem(60px)
+			border-radius: $radius
+			text-align: center
+			h3
+				width: 40%
+				margin: 0 auto
+				margin-bottom: 0.5rem
+				font-size: to-rem(30px)
+				@media (max-width: 1130px)
+					width: 70%
+				@media (max-width: 720px)
+					width: 90%
+			p
+				width: 38%
+				margin: 0 auto
+				margin-bottom: 1.5rem
+				font-size: 1rem
+				line-height: 1.5
+				color: #555555
+				@media (max-width: 1130px)
+					width: 70%
+				@media (max-width: 720px)
+					width: 90%
+			div.release
+				width: 90%
+				margin: to-rem(75px) auto to-rem(100px)
+				display: flex
+				justify-content: center
+				align-items: center
+				@media (max-width: 900px)
+					margin: to-rem(40px) auto to-rem(40px)
+				@media (max-width: 720px)
+					justify-content: space-between
+				@media (max-width: 500px)
+					margin: to-rem(20px) auto to-rem(20px)
+				> div
+					width: 15%
+					margin: 0 1%
+					text-align: center
+					> div
+						width: 100%
+						position: relative
+						height: to-rem(120px)
+						@media (max-width: 500px)
+							height: to-rem(60px)
+					span
+						font-size: to-rem(48px)
+						color: $grey-color
+						background-color: $white-color
+						border: 0.2rem solid $green-color
+						border-radius: 50%
+						padding: to-rem(28px)
+						user-select: none
+						position: absolute
+						top: 50%
+						left: 50%
+						transform: translate(-50%, -50%)
+						@media (max-width: 900px)
+							font-size: to-rem(36px)
+							padding: to-rem(20px)
+						@media (max-width: 500px)
+							font-size: to-rem(30px)
+							padding: to-rem(14px)
+							border: 0.2rem solid rgba($green-color, 0.3)
+					h5
+						width: 100%
+						display: block
+						text-align: center
+						font-size: to-rem(18px)
+						line-height: 1.67
+						color: $grey-color
+						margin-top: 1rem
+						@media (max-width: 500px)
+							font-size: to-rem(14px)
+			form#mailing
+				width: 42%
+				margin: 0 auto
+				position: relative
+				@media (max-width: 1130px)
+					width: 60%
+				@media (max-width: 720px)
+					width: 80%
+				> input[type="email"]
+					border-radius: $radius + 25px
+					border: 0.15rem solid #e5e2df
+					padding: to-rem(10px) to-rem(20px)
+					width: 100%
+					color: $grey-color
+					font-size: 1rem
+					transition: all 0.5s ease
+					@media (max-width: 500px)
+						font-size: to-rem(10px)
+				> input[type="submit"]
+					position: absolute
+					opacity: 0
+					visibility: hidden
+				label
+					cursor: pointer
+					svg
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+						right: 1rem
+						color: $green-color
+						width: to-rem(23px)
+						height: to-rem(23px)
+						opacity: 0.7
+						transition: opacity 0.3s ease
+						&:hover
+							opacity: 1
+						@media (max-width: 500px)
+							width: to-rem(30px)
+							height: to-rem(30px)
+							left: 50%
+							transform: translateX(-50%)
+							top: 150%
+
+/* Footer ------------------------------------------------ */
+@import ./sections/footer
